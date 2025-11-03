@@ -64,12 +64,6 @@ const Experience = () => {
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                       {exp.description}
                     </p>
-
-                    <div className="mt-4 h-16 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                      <span className="text-gray-500 dark:text-gray-400 text-sm">
-                        Company Logo
-                      </span>
-                    </div>
                   </div>
                 </div>
               ))}

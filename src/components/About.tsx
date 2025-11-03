@@ -20,17 +20,12 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl bg-gradient-to-br from-[#3444F0] to-purple-500 p-1">
-                <div className="w-full h-full rounded-2xl bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#3444F0] to-purple-500 flex items-center justify-center">
-                      <span className="text-5xl font-bold text-white">BD</span>
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      Profile Photo
-                    </p>
-                  </div>
-                </div>
+              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl bg-gradient-to-br from-[#3444F0] to-purple-500 p-1 overflow-hidden">
+                <img
+                  src="/bratin photo.jpg"
+                  alt="Bratin Das"
+                  className="w-full h-full rounded-2xl object-cover"
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#3444F0]/20 rounded-full blur-2xl"></div>
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-purple-500/20 rounded-full blur-2xl"></div>

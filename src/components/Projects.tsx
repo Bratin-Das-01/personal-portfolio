@@ -45,50 +45,35 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="group bg-white dark:bg-gray-900 rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-800"
             >
-              <div className="relative h-64 bg-gradient-to-br from-[#3444F0]/20 to-purple-500/20 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[#3444F0] to-purple-500 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-white">
-                        {project.title.substring(0, 2).toUpperCase()}
-                      </span>
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      Project Thumbnail
-                    </p>
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="flex items-start justify-between mb-4">
+                <span className="inline-block px-3 py-1 bg-[#3444F0]/10 text-[#3444F0] text-xs font-semibold rounded-full">
+                  {project.category}
+                </span>
               </div>
 
-              <div className="p-6">
-                <div className="mb-3">
-                  <span className="inline-block px-3 py-1 bg-[#3444F0]/10 text-[#3444F0] text-xs font-semibold rounded-full">
-                    {project.category}
-                  </span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                  {project.description}
-                </p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#3444F0] font-semibold hover:gap-3 transition-all duration-300"
-                >
-                  View Case Study
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-[#3444F0] transition-colors">
+                {project.title}
+              </h3>
+
+              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                {project.description}
+              </p>
+
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#3444F0] font-semibold hover:gap-3 transition-all duration-300 group/link"
+              >
+                View Case Study
+                <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />
+              </a>
             </div>
           ))}
         </div>
